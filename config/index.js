@@ -46,7 +46,8 @@ const config = {
           enable: true
         }
       }
-    }
+    },
+    esnextModules: ['taro-ui']
   }
 }
 

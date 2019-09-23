@@ -1,11 +1,12 @@
 import '@tarojs/async-await'
-import Taro, { Component } from '@tarojs/taro'
+import Taro, {Component} from '@tarojs/taro'
 import Home from './pages/home'
 import dva from './utils/dva'
 import models from './models'
-import { Provider } from '@tarojs/redux'
+import {Provider} from '@tarojs/redux'
 
 import './styles/base.scss'
+import 'taro-ui/dist/style/index.scss' // 全局引入一次即可
 
 
 const dvaApp = dva.createApp({
@@ -21,6 +22,7 @@ class App extends Component {
       'pages/home/index',
       'pages/cart/index',
       'pages/user/index',
+      'pages/study/index',
     ],
     window: {
       backgroundTextStyle: 'dark',
@@ -39,7 +41,7 @@ class App extends Component {
         text: "衣袋",
         iconPath: "./images/tab/cart.png",
         selectedIconPath: "./images/tab/cart-active.png"
-      },{
+      }, {
         pagePath: "pages/user/index",
         text: "我的",
         iconPath: "./images/tab/user.png",
@@ -48,12 +50,11 @@ class App extends Component {
       color: '#333',
       selectedColor: '#333',
       backgroundColor: '#fff',
-      borderStyle: '#ccc'
+      borderStyle: 'white'
     }
   }
 
   componentDidMount() {
-
   }
 
   render() {
