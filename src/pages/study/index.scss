@@ -1,0 +1,20 @@
+@import "../../styles/mixin";
+
+.study-page {
+  @include wh(100%, 100%);
+
+  .center-title {
+    text-align: center;
+  }
+
+  .detail-view {
+    padding-left: 7vw;
+
+    .view-btn {
+      width: 20vw;
+      display: inline;
+      float: right;
+      margin: 5px 5px 5px 10px;
+    }
+  }
+}
